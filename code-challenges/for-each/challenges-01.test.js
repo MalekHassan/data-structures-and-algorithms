@@ -92,7 +92,7 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
-  const resulte = [];
+  let resulte = [];
   arr.forEach(number => {
     if (number % 3 === 0 && number % 5 === 0) {
       resulte.push('Fizz Buzz')
@@ -102,6 +102,9 @@ const fizzbuzz = (arr) => {
     }
     else if (number % 3 === 0) {
       resulte.push('Fizz');
+    }
+    else if(number % 3 !== 0 && number % 5 !== 0 ){
+      resulte.push(number);
     }
   });
   return resulte;
